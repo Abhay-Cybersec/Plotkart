@@ -1,0 +1,67 @@
+// Mock plots database
+export const plotsData = [
+  {
+    id: 'PROP001',
+    title: 'Premium Residential Plot',
+    location: 'Anna Nagar, Chennai',
+    area: '1200 sq ft',
+    price: '₹45,00,000',
+    image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=500',
+    description: 'Prime location residential plot with CMDA approval. Perfect for building your dream home.',
+    seller: 'John Doe',
+    sellerContact: '+91 9876543210',
+    cmda_approved: true,
+    status: 'available',
+    blockchainHash: '0x7f9fade1c0d57a7af66ab4ead7c2eb1b3a3a8d8f3c4e5a6b7c8d9e0f1a2b3c4d',
+    documents: ['Sale Deed', 'Tax Receipt', 'Survey Map'],
+    listedDate: '2025-09-15'
+  },
+  {
+    id: 'PROP002',
+    title: 'Commercial Land',
+    location: 'T. Nagar, Chennai',
+    area: '2500 sq ft',
+    price: '₹1,20,00,000',
+    image: 'https://images.unsplash.com/photo-1464082354059-27db6ce50048?w=500',
+    description: 'Excellent commercial plot in high-traffic area. Ideal for retail or office space.',
+    seller: 'Jane Smith',
+    sellerContact: '+91 9876543211',
+    cmda_approved: true,
+    status: 'available',
+    blockchainHash: '0x8a0bfde2d1e68b8bg77bc5fbe8d3fc2c4b4b9e9g4d5f6b7c8d9e0f1a2b3c4d5',
+    documents: ['Sale Deed', 'Encumbrance Certificate'],
+    listedDate: '2025-09-20'
+  },
+  {
+    id: 'PROP003',
+    title: 'Agricultural Land',
+    location: 'Kanchipuram District',
+    area: '5 acres',
+    price: '₹75,00,000',
+    image: 'https://images.unsplash.com/photo-1560493676-04071c5f467b?w=500',
+    description: 'Fertile agricultural land with water source. Suitable for farming or investment.',
+    seller: 'Ramesh Kumar',
+    sellerContact: '+91 9876543212',
+    cmda_approved: false,
+    status: 'available',
+    blockchainHash: '0x9b1cgef3e2f79c9ch88cd6gcf9e4gd3d5c5c0f0h5e6g7c8d9e0f1a2b3c4d5e6',
+    documents: ['Patta Document', 'Survey Map'],
+    listedDate: '2025-10-01'
+  },
+  {
+    id: 'PROP004',
+    title: 'Gated Community Plot',
+    location: 'OMR, Chennai',
+    area: '1800 sq ft',
+    price: '₹65,00,000',
+    image: 'https://images.unsplash.com/photo-1513584684374-8bab748fbf90?w=500',
+    description: 'Premium gated community plot with 24/7 security and modern amenities.',
+    seller: 'Priya Sharma',
+    sellerContact: '+91 9876543213',
+    cmda_approved: true,
+    status: 'available',
+    blockchainHash: '0xac2dhfg4f3g80d0di99de7hd0f5he4e6d6d1g1i6f7h8d9e0f1a2b3c4d5e6f7',
+    documents: ['Sale Deed', 'NOC', 'Approved Plan'],
+    listedDate: '2025-10-05'
+  }
+]

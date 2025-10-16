@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:14-alpine
+    container_name: plotkart_db
+    environment:
+      POSTGRES_DB: plotkart_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - plotkart_network
+
+  backend:
+    build: .
+    container_name: plotkart_backend
+    depends_on:
+      - postgres
+    environment:
+      NODE_ENV: development
+      DATABASE_URL: postgresql://postgres:postgres@postgres:5432/plotkart_db
+      JWT_SECRET: your_jwt_secret_key_min_32_chars_change_this
+      PORT: 5000
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./src:/app/src
+      - ./uploads:/app/uploads
+    networks:
+      - plotkart_network
+    command: npm run dev
+
+  ipfs:
+    image: ipfs/go-ipfs:latest
+    container_name: plotkart_ipfs
+    ports:
+      - "4001:4001"
+      - "5001:5001"
+      - "8080:8080"
+    volumes:
+      - ipfs_data:/data/ipfs
+    networks:
+      - plotkart_network
+
+networks:
+  plotkart_network:
+    driver: bridge
+
+volumes:
+  postgres_data:
+  ipfs_data:
